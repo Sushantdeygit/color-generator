@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SingleColor from './SingleColor'
+import {AiOutlineCopy} from 'react-icons/ai'
 
 import Values from 'values.js'
 
@@ -15,7 +16,6 @@ function App() {
       setList(colors)
     } catch (error) {
       setError(true)
-      console.log(error)
     }
   }
 
@@ -31,10 +31,12 @@ function App() {
             placeholder='#f15025'
             className={`${error ? 'error' : null}`}
           />
+          
           <button className='btn' type='submit'>
             submit
           </button>
         </form>
+        <h1>Click to copy the hex values <AiOutlineCopy/></h1>
       </section>
       <section className='colors'>
         {list.map((color, index) => {

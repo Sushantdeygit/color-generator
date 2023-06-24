@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import rgbToHex from './utils'
+import {MdContentCopy} from 'react-icons/md'
 
 const SingleColor = ({ rgb, weight, index, hexColor }) => {
   const [alert, setAlert] = useState(false)
@@ -24,6 +25,11 @@ const SingleColor = ({ rgb, weight, index, hexColor }) => {
       <p className='percent-value'>{weight}%</p>
       <p className='color-value'>{hexValue}</p>
       {alert && <p className='alert'>copied to clipboard</p>}
+      <button className='button'
+      onClick={() => {
+        setAlert(true)
+        navigator.clipboard.writeText(hexValue)
+      }}><MdContentCopy/></button>
     </article>
   )
 }
