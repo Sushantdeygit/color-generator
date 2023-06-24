@@ -161,7 +161,7 @@ input {
 }
 .btn {
   background: var(--clr-primary-5);
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
   font-size: 1.2rem;
   border-color: transparent;
   border-top-right-radius: var(--radius);
